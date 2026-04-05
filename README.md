@@ -7,6 +7,9 @@
 
 A comprehensive sales data analysis project featuring Python-based data processing and an interactive React dashboard for visualizing Q1 2024 sales performance.
 
+![app](recording_app.gif)
+
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -74,7 +77,7 @@ All charts are generated automatically and saved to the `outputs/` folder:
 | Order Distribution | `chart_order_distribution.png` | Histogram of order values with mean/median |
 | Orders vs AOV | `chart_monthly_orders_aov.png` | Combo chart showing orders and average order value |
 
-![Monthly Revenue](outputs/chart_monthly_revenue.png)
+![Monthly Revenue](chart_monthly_revenue.png)
 *Monthly revenue comparison showing March as the strongest month*
 
 ## Project Structure
