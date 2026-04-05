@@ -7,7 +7,7 @@
 
 A comprehensive sales data analysis project featuring Python-based data processing and an interactive React dashboard for visualizing Q1 2024 sales performance.
 
-
+![Dashboard Preview](./assets/dashboard-preview.png)
 
 ## Table of Contents
 
@@ -62,31 +62,44 @@ This project provides a complete sales analysis solution for Q1 2024 (January-Ma
 - **Responsive Design**: Works on desktop and mobile devices
 
 ### Visualizations
-1. Monthly revenue comparison
-2. Daily revenue trends
-3. Product category distribution (pie chart)
-4. Category revenue breakdown (horizontal bar)
-5. Regional performance comparison
-6. Market share by region
-7. Customer segmentation
-8. Order value distribution
+
+All charts are generated automatically and saved to the `outputs/` folder:
+
+| Chart | File | Description |
+|-------|------|-------------|
+| Monthly Revenue | `chart_monthly_revenue.png` | Bar chart comparing Jan-Mar revenue |
+| Daily Revenue | `chart_daily_revenue.png` | Line chart showing daily trends across Q1 |
+| Category Distribution | `chart_category_distribution.png` | Pie chart of revenue by product category |
+| Category Revenue | `chart_category_revenue.png` | Horizontal bar chart of category performance |
+| Regional Performance | `chart_regional_performance.png` | Side-by-side regional comparison |
+| Customer Segments | `chart_customer_segments.png` | Bar chart of customer distribution |
+| Order Distribution | `chart_order_distribution.png` | Histogram of order values with mean/median |
+| Orders vs AOV | `chart_monthly_orders_aov.png` | Combo chart showing orders and average order value |
+
+![Monthly Revenue](outputs/chart_monthly_revenue.png)
+*Monthly revenue comparison showing March as the strongest month*
 
 ## Project Structure
 
 ```
 sales-analysis-dashboard/
 ├── data/
-│   └── sales_data_q1_2024.csv          # Sample sales dataset
+│   └── sales_data_q1_2024.csv          # Sample sales dataset (5,000 records)
 ├── scripts/
 │   ├── generate_sample_data.py         # Data generation script
 │   └── sales_analysis_report.py        # Main analysis script
 ├── dashboard/
 │   └── index.html                      # React dashboard (single file)
 ├── outputs/
-│   ├── chart_monthly_revenue.png       # Generated visualizations
-│   ├── chart_category_distribution.png
-│   ├── chart_regional_performance.png
-│   └── ...
+│   ├── chart_monthly_revenue.png       # Monthly revenue bar chart
+│   ├── chart_daily_revenue.png         # Daily revenue trend line chart
+│   ├── chart_category_distribution.png # Product category pie chart
+│   ├── chart_category_revenue.png      # Category revenue horizontal bar chart
+│   ├── chart_regional_performance.png  # Regional comparison charts
+│   ├── chart_customer_segments.png     # Customer segment distribution
+│   ├── chart_order_distribution.png    # Order value histogram
+│   ├── chart_monthly_orders_aov.png    # Orders vs AOV combo chart
+│   └── sales_analysis_report_q1_2024.html  # Static HTML report
 ├── README.md                           # This file
 └── requirements.txt                    # Python dependencies
 ```
@@ -133,7 +146,15 @@ python scripts/sales_analysis_report.py
 This will:
 - Load and clean the sales data
 - Calculate KPIs and metrics
-- Generate visualizations (saved to `outputs/`)
+- Generate 8 visualization charts (saved to `outputs/`):
+  - `chart_monthly_revenue.png`
+  - `chart_daily_revenue.png`
+  - `chart_category_distribution.png`
+  - `chart_category_revenue.png`
+  - `chart_regional_performance.png`
+  - `chart_customer_segments.png`
+  - `chart_order_distribution.png`
+  - `chart_monthly_orders_aov.png`
 - Create an HTML report (`outputs/sales_analysis_report_q1_2024.html`)
 
 ### 3. View Dashboard
@@ -204,26 +225,44 @@ The dashboard is organized into 6 tabs:
 - Monthly performance summary table
 - Revenue vs Orders comparison chart
 - Average Order Value trend line chart
+- **Static Chart**: `chart_monthly_revenue.png`, `chart_monthly_orders_aov.png`
 
 #### Categories
 - Revenue distribution pie chart
 - Category revenue bar chart
 - Detailed category performance table
+- **Static Charts**: `chart_category_distribution.png`, `chart_category_revenue.png`
 
 #### Regions
 - Revenue by region bar chart
 - Market share pie chart
 - Regional performance metrics table
+- **Static Chart**: `chart_regional_performance.png`
 
 #### Customers
 - Customer segment distribution
 - Revenue by segment analysis
 - Detailed segment metrics table
+- **Static Charts**: `chart_customer_segments.png`, `chart_order_distribution.png`
 
 #### Insights
 - Key findings cards with icons
 - Business recommendations
 - Strategic action items
+
+### Static Report
+
+For a standalone HTML report with all charts embedded, open:
+```
+outputs/sales_analysis_report_q1_2024.html
+```
+
+This report includes:
+- All KPIs and metrics
+- All 8 generated charts
+- Data tables
+- Business insights and recommendations
+- Professional styling
 
 ### Customization
 
@@ -234,19 +273,50 @@ To use your own data:
 3. Re-run the analysis script
 4. Update the data object in `dashboard/index.html` (lines 30-90)
 
+## Generated Charts Gallery
+
+### Monthly Performance
+| Monthly Revenue | Daily Revenue Trend |
+|-----------------|---------------------|
+| ![Monthly](outputs/chart_monthly_revenue.png) | ![Daily](outputs/chart_daily_revenue.png) |
+| Revenue comparison across Q1 months | Daily revenue fluctuations throughout the quarter |
+
+### Product Categories
+| Category Distribution | Category Revenue |
+|-----------------------|------------------|
+| ![Distribution](outputs/chart_category_distribution.png) | ![Revenue](outputs/chart_category_revenue.png) |
+| Pie chart showing market share by category | Horizontal bar chart of revenue by category |
+
+### Regional & Customer Analysis
+| Regional Performance | Customer Segments |
+|----------------------|-------------------|
+| ![Regional](outputs/chart_regional_performance.png) | ![Segments](outputs/chart_customer_segments.png) |
+| Side-by-side revenue and market share | Customer distribution by value segment |
+
+### Order Analysis
+| Order Distribution | Orders vs AOV |
+|--------------------|---------------|
+| ![Distribution](outputs/chart_order_distribution.png) | ![OrdersAOV](outputs/chart_monthly_orders_aov.png) |
+| Histogram of order values | Monthly orders and average order value trend |
+
 ## Key Insights
 
 ### Top Findings
 
 1. **Best Performing Month**: March generated $1.40M in revenue (5.5% growth from February)
+   - *See: `chart_monthly_revenue.png`*
 
 2. **Top Product Category**: Electronics dominates with $2.56M (63% of total revenue)
+   - *See: `chart_category_distribution.png`, `chart_category_revenue.png`*
 
 3. **Leading Region**: East region contributed $1.26M with the highest AOV of $946.66
+   - *See: `chart_regional_performance.png`*
 
 4. **VIP Customer Impact**: 118 VIP customers generated $1.24M, averaging $10,467 per customer
+   - *See: `chart_customer_segments.png`*
 
 5. **Customer Loyalty**: 94.07% repeat customer rate indicates strong retention
+   - *See: `chart_order_distribution.png` for purchase patterns*
 
 ### Business Recommendations
 
@@ -290,11 +360,31 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ### Areas for Contribution
 
-- Additional visualizations
-- More data analysis features
-- Dashboard UI improvements
-- Documentation updates
-- Bug fixes
+- **Additional Visualizations**: New chart types or interactive features
+- **Data Export**: Add export to Excel/CSV functionality
+- **Dashboard UI**: Improve styling, add dark mode
+- **Documentation**: Expand README with more examples
+- **Bug Fixes**: Report issues or submit fixes
+
+### Adding New Charts
+
+To add a new visualization:
+
+1. Add chart generation code to `sales_analysis_report.py`:
+```python
+# Example: New chart
+fig, ax = plt.subplots(figsize=(10, 6))
+# ... chart code ...
+plt.savefig(f"{output_dir}/chart_new_visualization.png")
+```
+
+2. Reference the chart in this README:
+```markdown
+![New Chart](outputs/chart_new_visualization.png)
+*Description of the new chart*
+```
+
+3. Update the dashboard (`dashboard/index.html`) to include the new chart data
 
 ## License
 
