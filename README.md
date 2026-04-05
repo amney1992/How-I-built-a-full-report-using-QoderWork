@@ -276,25 +276,25 @@ To use your own data:
 ### Monthly Performance
 | Monthly Revenue | Daily Revenue Trend |
 |-----------------|---------------------|
-| ![Monthly](outputs/chart_monthly_revenue.png) | ![Daily](outputs/chart_daily_revenue.png) |
+| ![Monthly](chart_monthly_revenue.png) | ![Daily](chart_daily_revenue.png) |
 | Revenue comparison across Q1 months | Daily revenue fluctuations throughout the quarter |
 
 ### Product Categories
 | Category Distribution | Category Revenue |
 |-----------------------|------------------|
-| ![Distribution](outputs/chart_category_distribution.png) | ![Revenue](outputs/chart_category_revenue.png) |
+| ![Distribution](chart_category_distribution.png) | ![Revenue](chart_category_revenue.png) |
 | Pie chart showing market share by category | Horizontal bar chart of revenue by category |
 
 ### Regional & Customer Analysis
 | Regional Performance | Customer Segments |
 |----------------------|-------------------|
-| ![Regional](outputs/chart_regional_performance.png) | ![Segments](outputs/chart_customer_segments.png) |
+| ![Regional](chart_regional_performance.png) | ![Segments](chart_customer_segments.png) |
 | Side-by-side revenue and market share | Customer distribution by value segment |
 
 ### Order Analysis
 | Order Distribution | Orders vs AOV |
 |--------------------|---------------|
-| ![Distribution](outputs/chart_order_distribution.png) | ![OrdersAOV](outputs/chart_monthly_orders_aov.png) |
+| ![Distribution](chart_order_distribution.png) | ![OrdersAOV](chart_monthly_orders_aov.png) |
 | Histogram of order values | Monthly orders and average order value trend |
 
 ## Key Insights
