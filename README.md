@@ -7,8 +7,6 @@
 
 A comprehensive sales data analysis project featuring Python-based data processing and an interactive React dashboard for visualizing Q1 2024 sales performance.
 
-![Dashboard Preview](./assets/dashboard-preview.png)
-
 ## Table of Contents
 
 - [Overview](#overview)
